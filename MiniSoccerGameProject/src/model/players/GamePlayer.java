@@ -17,7 +17,7 @@ public abstract class GamePlayer implements Comparable<GamePlayer> {
 	public GamePlayer(String name, Color color) {
 		playerName = name;
 		playerColor = color;
-		playerStatistics = new PlayerStatistics();
+		playerStatistics = new PlayerStatistics(); //test
 		setInitialPosition();
 	}
 
