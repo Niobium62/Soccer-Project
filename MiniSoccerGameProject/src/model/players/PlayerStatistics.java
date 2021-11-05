@@ -1,5 +1,6 @@
 package model.players;
 
+// a class that stores an Integer called stat
 public class PlayerStatistics {
 
 	private Integer stat;

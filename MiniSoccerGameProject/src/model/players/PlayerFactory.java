@@ -4,6 +4,7 @@ import java.awt.*;
 
 public class PlayerFactory {
 	
+	//instatiate and return a new player
 	public GamePlayer getPlayer(String playerType) {
 		if (playerType.equals("striker")) {
 			Color myColor = new Color(255, 0, 0);

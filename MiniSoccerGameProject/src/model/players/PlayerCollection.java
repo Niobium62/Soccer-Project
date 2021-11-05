@@ -29,6 +29,7 @@ public class PlayerCollection implements Iterable<GamePlayer>{
 		return null;
 	}
 	
+	//sort based on player
 	public void sort() {
 		Collections.sort(playerList);
 	}
