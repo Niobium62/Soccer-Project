@@ -1,4 +1,4 @@
-package model;
+package model.players;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ public class PlayerCollection {
 		playerList.add(player);
 	}
 	
-	//returns the player that has the matching playerName
+	//returns the player that has the matching playerName. otherwise, returns null
 	public GamePlayer get(String playerName) {
 		for (GamePlayer i : playerList) {
 			if (i.getPlayerName().equals(playerName)) {
