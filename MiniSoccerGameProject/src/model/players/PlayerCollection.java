@@ -1,11 +1,12 @@
 package model.players;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
-import model.players.GamePlayer;
 
-public class PlayerCollection {
+public class PlayerCollection implements Iterable<GamePlayer>{
 
 	private List<GamePlayer> playerList;
 	
@@ -27,4 +28,16 @@ public class PlayerCollection {
 		}
 		return null;
 	}
+	
+	public void sort() {
+		Collections.sort(playerList);
+	}
+
+	@Override
+	public Iterator<GamePlayer> iterator() {
+		// TODO Auto-generated method stub
+		return playerList.iterator();
+	}
+	
+	
 }

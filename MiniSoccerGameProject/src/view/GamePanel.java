@@ -13,6 +13,11 @@ import java.util.TimerTask;
 
 public class GamePanel extends JPanel {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3408376750181963235L;
+
 	private final Font uiFont;
 
 	private SoccerGame game;
