@@ -66,6 +66,6 @@ public class Goalkeeper extends GamePlayer {
 
 	@Override
 	public String toString() {
-		return playerName + " caught " + playerStatistics.toString() + " balls";
+		return playerName + " caught " + playerStatistics.getStatistics() + " balls";
 	}
 }
