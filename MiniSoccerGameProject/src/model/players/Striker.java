@@ -49,6 +49,6 @@ public class Striker extends GamePlayer {
 
 	@Override
 	public String toString() {
-		return playerName + " scored " + playerStatistics.getStatistics() + " goals";
+		return playerName + " scored " + playerStatistics.toString() + " goals";
 	}
 }

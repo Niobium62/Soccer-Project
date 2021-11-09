@@ -1,22 +1,20 @@
 package model.players;
 
+
 import java.awt.*;
 
+/**
+ * Player factory to create different kinds of players
+ */
 public class PlayerFactory {
 
-	// instantiate and return a new player
-	public GamePlayer getPlayer(String playerType) {
-		//create striker
-		if (playerType.equals("striker")) {
-			Color myColor = new Color(255, 0, 0);
-			return new Striker("Striker", myColor);
-		// create goalkeeper
-		} else if (playerType.equals("goalkeeper")) {
-			Color myColor = new Color(0, 0, 255);
-			return new Goalkeeper("Goalkeeper", myColor);
-		} else {
-			return null;
-		}
-	}
-
+    public GamePlayer getPlayer(String type) {
+        if ("striker".equalsIgnoreCase(type)) {
+            return new Striker("Striker", Color.BLUE);
+        } else if ("goalkeeper".equalsIgnoreCase(type)) {
+            return new Goalkeeper("Goalkeeper", Color.ORANGE);
+        } else {
+            return null;
+        }
+    }
 }

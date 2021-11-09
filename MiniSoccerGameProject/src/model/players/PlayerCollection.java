@@ -1,44 +1,57 @@
 package model.players;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+public class PlayerCollection implements Iterable<GamePlayer> {
 
-public class PlayerCollection implements Iterable<GamePlayer>{
+    private int size;
+    private List<GamePlayer> players;
 
-	private List<GamePlayer> playerList;
-	
-	public PlayerCollection() {
-		playerList = new ArrayList<GamePlayer>();
-	}
-	
-	//adds the player to the collection
-	public void add(GamePlayer player) {
-		playerList.add(player);
-	}
-	
-	//returns the player that has the matching playerName. otherwise, returns null
-	public GamePlayer get(String playerName) {
-		for (GamePlayer i : playerList) {
-			if (i.getPlayerName().equals(playerName)) {
-				return i;
-			}
-		}
-		return null;
-	}
-	
-	//sort based on player
-	public void sort() {
-		Collections.sort(playerList);
-	}
+    public PlayerCollection() {
+        this.players = new ArrayList<>();
+        this.size = 0;
+    }
 
-	@Override
-	public Iterator<GamePlayer> iterator() {
-		// TODO Auto-generated method stub
-		return playerList.iterator();
-	}
-	
-	
+    @Override
+    public Iterator<GamePlayer> iterator() {
+        return new PlayerCollectionIterator();
+    }
+
+    public void add(GamePlayer player) {
+        players.add(player);
+        ++size;
+    }
+
+
+    public GamePlayer get(String name) {
+        for (int i = 0; i < size; i++) {
+            GamePlayer player = players.get(i);
+            if (player.getPlayerName().equals(name)) {
+                return player;
+            }
+        }
+        return null;
+    }
+
+    public void sort() {
+        players.sort(GamePlayer::compareTo);
+    }
+
+
+    class PlayerCollectionIterator implements Iterator<GamePlayer> {
+        private int index = 0;
+
+        @Override
+        public boolean hasNext() {
+            return index < size;
+        }
+
+        @Override
+        public GamePlayer next() {
+            return players.get(index++);
+        }
+    }
+
 }

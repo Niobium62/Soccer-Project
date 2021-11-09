@@ -1,21 +1,19 @@
 package model.players;
 
-// a class that stores an Integer called stat
 public class PlayerStatistics {
 
-	private Integer stat;
-	
-	public PlayerStatistics() {
-		stat = 0;
-	}
+    private int statistics;
 
-	public Integer getStatistics() {
-		return stat;
-	}
+    public Integer getStatistics() {
+        return statistics;
+    }
 
-	public void setStatistics(Integer newStatistics) {
-		stat = newStatistics;
-	}
-	
-	
+    public void setStatistics(Integer statistics) {
+        this.statistics = statistics;
+    }
+
+    @Override
+    public String toString() {
+        return String.valueOf(statistics);
+    }
 }
