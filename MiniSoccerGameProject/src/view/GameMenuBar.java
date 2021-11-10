@@ -4,8 +4,21 @@ import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
+/**
+ * The GameMenuBar class is a child of JMenuBar, and contains all of the elements and controls in the menu bar
+ * which help our Mini-Soccer Game function correctly.
+ * 
+ * @author Roberto Shino
+ * @author Arian Mohamad Hosaini
+ * @author Wenjing Qu
+ */
 public class GameMenuBar extends JMenuBar {
 
+	/**
+	 * Creates the GameMenuBar with the given ActionListener.
+	 * 
+	 * @param menubarListener	the given ActionListener
+	 */
 	public GameMenuBar(ActionListener menubarListener) {
 		super();
 		JMenu gameMenu = new JMenu("Game");
@@ -19,6 +32,15 @@ public class GameMenuBar extends JMenuBar {
 		super.add(controlMenu);
 	}
 
+	/**
+	 * Creates a JMenuItem for the GameMenuBar using the given parameters.
+	 * 
+	 * @param text						what is written on the item
+	 * @param actionCommand				the command for the item
+	 * @param accelerator				the accelerator for the item
+	 * @param listener					the ActionListener for the item
+	 * @return	<code>JMenuItem</code>	the new JMenuItem
+	 */
 	private JMenuItem createMenuItem(String text, String actionCommand, int accelerator, ActionListener listener) {
 		JMenuItem menuItem = new JMenuItem(text);
 		menuItem.setActionCommand(actionCommand);

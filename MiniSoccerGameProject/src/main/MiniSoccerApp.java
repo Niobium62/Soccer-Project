@@ -6,6 +6,14 @@ import view.GamePanel;
 
 import javax.swing.*;
 
+/**
+ * The MiniSoccerApp class represents the entirety of the elements which make up
+ * the Mini-Soccer Game in one runnable application.
+ * 
+ * @author Roberto Shino
+ * @author Arian Mohamad Hosaini
+ * @author Wenjing Qu
+ */
 public class MiniSoccerApp {
 
 	public static void main(String[] args) {

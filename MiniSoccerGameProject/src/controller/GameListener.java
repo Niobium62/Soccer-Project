@@ -6,10 +6,23 @@ import view.GamePanel;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+/**
+ * The GameListener class implements the interface KeyListener, and is responsible for
+ * hearing the user's game inputs for the striker in our Mini-Soccer Game.
+ * 
+ * @author Roberto Shino
+ * @author Arian Mohamad Hosaini
+ * @author Wenjing Qu
+ */
 public class GameListener implements KeyListener {
 
 	private final GamePanel gamePanel;
 
+	/**
+	 * Creates the new GameListener required for hearing user inputs during the soccer game.
+	 * 
+	 * @param panel	the panel which will be used for the game
+	 */
 	public GameListener(GamePanel panel) {
 		gamePanel = panel;
 	}

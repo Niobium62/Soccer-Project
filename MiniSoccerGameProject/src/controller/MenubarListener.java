@@ -6,10 +6,23 @@ import view.GamePanel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * The MenubarListener class implements the ActionListener interface, and is responsible for hearing
+ * the user's menu bar inputs such as pause, resume, quit and restart during our Mini-Soccer Game.
+ * 
+ * @author Roberto Shino
+ * @author Arian Mohamad Hosaini
+ * @author Wenjing Qu
+ */
 public class MenubarListener implements ActionListener {
 
 	private final GamePanel gamePanel;
 
+	/**
+	 * Creates the new MenubarListener required for hearing the user's inputs during the game.
+	 * 
+	 * @param panel	the panel which will be used for the game
+	 */
 	public MenubarListener(GamePanel panel) {
 		gamePanel = panel;
 	}
